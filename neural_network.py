@@ -179,14 +179,16 @@ if __name__ == '__main__':
     ## two hidden layers
     start_time = time.time()
 
-    max_hidden_layer_units_2 = 2
+    max_hidden_layer_units_2 = 128
     unit_2 = 1
     units_2 = []
     accuracy_2 = []
     while unit_2 <= max_hidden_layer_units_2:
         units_2.append(unit_2)
-        unit_2 += math.ceil(unit_2 / 10)
-    units_2 = units_2[1:]
+        # unit_2 += math.ceil(unit_2 / 10)
+        unit_2+=1
+    # print units_2
+    # units_2 = units_2[1:]
     accuracy_mat = np.zeros((len(units_2), len(units_2)))
 
     for i in range(len(units_2)):
